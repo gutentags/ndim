@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/kriskowal/dimension"
+    "url": "https://github.com/kriskowal/dimensions"
   },
   "keywords": [
     "point",
@@ -25,9 +25,9 @@
   "author": "Kris Kowal <kris@cixar.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kriskowal/dimension/issues"
+    "url": "https://github.com/kriskowal/dimensions/issues"
   },
-  "homepage": "https://github.com/kriskowal/dimension",
+  "homepage": "https://github.com/kriskowal/dimensions",
   "dependencies": {
     "jasminum": "^2.0.5"
   }
