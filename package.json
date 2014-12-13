@@ -1,5 +1,5 @@
 {
-  "name": "dimensions",
+  "name": "ndim",
   "version": "0.0.0",
   "description": "Points, regions, and other multi-dimensional geometry",
   "files": [
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/kriskowal/dimensions"
+    "url": "https://github.com/kriskowal/ndim"
   },
   "keywords": [
     "point",
@@ -25,9 +25,9 @@
   "author": "Kris Kowal <kris@cixar.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kriskowal/dimensions/issues"
+    "url": "https://github.com/kriskowal/ndim/issues"
   },
-  "homepage": "https://github.com/kriskowal/dimensions",
+  "homepage": "https://github.com/kriskowal/ndim",
   "dependencies": {
     "jasminum": "^2.0.5"
   }
