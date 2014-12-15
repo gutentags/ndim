@@ -116,3 +116,7 @@ Point2.prototype.equals = function (that) {
     return this.x === that.x && this.y === that.y;
 };
 
+Point2.prototype.toString = function () {
+    return 'Point2(' + this.x + ', ' + this.y + ')';
+};
+

@@ -118,3 +118,7 @@ Point3.prototype.equals = function (that) {
     return this.x === that.x && this.y === that.y && this.z === that.z;
 };
 
+Point3.prototype.toString = function () {
+    return 'Point3(' + this.x + ', ' + this.y + ', ' + this.z + ')';
+};
+

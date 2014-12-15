@@ -72,3 +72,7 @@ Region.prototype.equals = function (that) {
     return that && this.position.equals(that.position) && this.size.equals(that.size);
 };
 
+Region.prototype.toString = function () {
+    return this.constructor.name + '(' + this.position.toString() + ', ' + this.size.toString() + ')';
+};
+
