@@ -1,13 +1,13 @@
 {
   "name": "ndim",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Points, regions, and other multi-dimensional geometry",
   "files": [
-      "point.js",
-      "point2.js",
-      "point3.js",
-      "region.js",
-      "region2.js"
+    "point.js",
+    "point2.js",
+    "point3.js",
+    "region.js",
+    "region2.js"
   ],
   "scripts": {
     "test": "jasminum test"
