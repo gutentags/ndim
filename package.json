@@ -28,7 +28,7 @@
     "url": "https://github.com/kriskowal/ndim/issues"
   },
   "homepage": "https://github.com/kriskowal/ndim",
-  "dependencies": {
+  "devDependencies": {
     "jasminum": "^2.0.5"
   }
 }
