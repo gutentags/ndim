@@ -17,6 +17,10 @@ Point.prototype.mul = function (that) {
     return this.clone().mulThis(that);
 };
 
+Point.prototype.div = function (that) {
+    return this.clone().divThis(that);
+};
+
 Point.prototype.scale = function (n) {
     return this.clone().scaleThis(n);
 };

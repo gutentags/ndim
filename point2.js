@@ -32,6 +32,12 @@ Point2.prototype.mulThis = function (that) {
     return this;
 };
 
+Point2.prototype.divThis = function (that) {
+    this.x = this.x / that.x;
+    this.y = this.y / that.y;
+    return this;
+};
+
 Point2.prototype.scaleThis = function (n) {
     this.x = this.x * n;
     this.y = this.y * n;
