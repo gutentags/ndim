@@ -10,7 +10,7 @@
     "region2.js"
   ],
   "scripts": {
-    "test": "jasminum test && node test"
+    "test": "node test"
   },
   "repository": {
     "type": "git",
