@@ -1,7 +1,7 @@
 "use strict";
 
-var Region2 = require("./region2").Region2;
-var Point2 = require("./point2").Point2;
+var Region2 = require("./region2");
+var Point2 = require("./point2");
 
 var dx = {0: 0, 1: 1, 2: 0, 3: 1};
 var dy = {0: 0, 1: 0, 2: 1, 3: 1};
