@@ -1,103 +1,100 @@
+"use strict";
 
+var test = require("tape");
 var Point2 = require("../point2");
 var Region2 = require("../region2");
 
-describe("roundOutward", function () {
-    it("works", function () {
-        expect(
-            new Region2(
-                new Point2(0.25, 0.25),
-                new Point2(0.5, 0.5)
-            )
-            .roundOutward()
-        ).toEqual(new Region2(
+test("roundOutward", function t(assert) {
+    assert.ok(
+        new Region2(
+            new Point2(0.25, 0.25),
+            new Point2(0.5, 0.5)
+        )
+        .roundOutward()
+        .equals(new Region2(
             new Point2(0, 0),
-            new Point2(1, 1))
-        );
-    });
+            new Point2(1, 1)
+        )),
+        "rounds outward"
+    );
+    assert.end();
 });
 
-describe("roundInward", function () {
-    it("works", function () {
-        expect(
-            new Region2(
-                new Point2(0.25, 0.25),
-                new Point2(0.5, 0.5)
-            )
-            .roundInward()
-        ).toEqual(new Region2(
+test("roundInward", function t(assert) {
+    assert.ok(
+        new Region2(
+            new Point2(0.25, 0.25),
+            new Point2(0.5, 0.5)
+        )
+        .roundInward()
+        .equals(new Region2(
             new Point2(0, 0),
-            new Point2(0, 0))
-        );
-    });
-
-    it("works", function () {
-        expect(
-            new Region2(
-                new Point2(0.5, 0.5),
-                new Point2(2, 2)
-            )
-            .roundInward()
-        ).toEqual(new Region2(
+            new Point2(0, 0)
+        )),
+        "rounds inward to zero"
+    );
+    assert.ok(
+        new Region2(
+            new Point2(0.5, 0.5),
+            new Point2(2, 2)
+        )
+        .roundInward()
+        .equals(new Region2(
             new Point2(1, 1),
-            new Point2(1, 1))
-        );
-    });
-
+            new Point2(1, 1)
+        )),
+        "rounds inward to non-zero on even boundry"
+    );
+    assert.end();
 });
 
-describe("round", function () {
-
-    it("rounds to zero size", function () {
-        expect(
-            new Region2(
-                new Point2(0.5, 0.5),
-                new Point2(0.5, 0.5)
-            )
-            .round()
-        ).toEqual(new Region2(
+test("round", function t(assert) {
+    assert.ok(
+        new Region2(
+            new Point2(0.5, 0.5),
+            new Point2(0.5, 0.5)
+        )
+        .round()
+        .equals(new Region2(
             new Point2(1, 1),
-            new Point2(0, 0))
-        );
-    });
-
-    it("rounds outward", function () {
-        expect(
-            new Region2(
-                new Point2(0.25, 0.25),
-                new Point2(0.5, 0.5)
-            )
-            .round()
-        ).toEqual(new Region2(
+            new Point2(0, 0)
+        )),
+        "rounds to zero size"
+    );
+    assert.ok(
+        new Region2(
+            new Point2(0.25, 0.25),
+            new Point2(0.5, 0.5)
+        )
+        .round()
+        .equals(new Region2(
             new Point2(0, 0),
-            new Point2(1, 1))
-        );
-    });
-
+            new Point2(1, 1)
+        )),
+        "rounds outward"
+    );
+    assert.end();
 });
 
-describe("annex", function () {
+test("annex", function t(assert) {
 
-    it("should subsume region +x +y", function () {
-        var a = new Region2(new Point2(0, 0), new Point2(1, 1));
-        var b = new Region2(new Point2(2, 2), new Point2(1, 1));
-        a.annexThis(b);
-        expect(a).toEqual(new Region2(new Point2(0, 0), new Point2(3, 3)));
-    });
+    var a = new Region2(new Point2(0, 0), new Point2(1, 1));
+    var b = new Region2(new Point2(2, 2), new Point2(1, 1));
+    a.annexThis(b);
+    assert.ok(a.equals(new Region2(new Point2(0, 0), new Point2(3, 3))),
+        "subsumes region +x +y");
 
-    it("should subsume zero size region", function () {
-        var a = new Region2(new Point2(0, 0), new Point2(1, 1));
-        var b = new Region2(new Point2(2, 2), new Point2(0, 0));
-        a.annexThis(b);
-        expect(a).toEqual(new Region2(new Point2(0, 0), new Point2(2, 2)));
-    });
+    var a = new Region2(new Point2(0, 0), new Point2(1, 1));
+    var b = new Region2(new Point2(2, 2), new Point2(0, 0));
+    a.annexThis(b);
+    assert.ok(a.equals(new Region2(new Point2(0, 0), new Point2(2, 2))),
+        "subsumes zero size region");
 
-    it("should subsume region -x, -y", function () {
-        var a = new Region2(new Point2(2, 2), new Point2(0, 0));
-        var b = new Region2(new Point2(0, 0), new Point2(1, 1));
-        a.annexThis(b);
-        expect(a).toEqual(new Region2(new Point2(0, 0), new Point2(2, 2)));
-    });
+    var a = new Region2(new Point2(2, 2), new Point2(0, 0));
+    var b = new Region2(new Point2(0, 0), new Point2(1, 1));
+    a.annexThis(b);
+    assert.ok(a.equals(new Region2(new Point2(0, 0), new Point2(2, 2))),
+        "subsumes region -x -y");
 
+    assert.end();
 });
-
