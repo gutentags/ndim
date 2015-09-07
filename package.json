@@ -7,7 +7,9 @@
     "point2.js",
     "point3.js",
     "region.js",
-    "region2.js"
+    "region2.js",
+    "box.js",
+    "box2.js"
   ],
   "scripts": {
     "test": "node test"
