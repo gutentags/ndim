@@ -10,7 +10,7 @@
     "region2.js"
   ],
   "scripts": {
-    "test": "jasminum test"
+    "test": "jasminum test && node test"
   },
   "repository": {
     "type": "git",
@@ -29,6 +29,7 @@
   },
   "homepage": "https://github.com/kriskowal/ndim",
   "devDependencies": {
-    "jasminum": "^2.0.5"
+    "jasminum": "^2.0.5",
+    "tape": "^4.2.0"
   }
 }
