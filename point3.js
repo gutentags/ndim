@@ -43,14 +43,14 @@ Point3.prototype.scaleThis = function (n) {
     return this;
 };
 
-Point2.prototype.bitwiseAndThis = function (n) {
+Point3.prototype.bitwiseAndThis = function (n) {
     this.x = this.x & n;
     this.y = this.y & n;
     this.z = this.z & n;
     return this;
 };
 
-Point2.prototype.bitwiseOrThis = function (n) {
+Point3.prototype.bitwiseOrThis = function (n) {
     this.x = this.x | n;
     this.y = this.y | n;
     this.z = this.z | n;
@@ -81,13 +81,13 @@ Point3.prototype.absThis = function () {
     this.z = Math.abs(this.z);
 };
 
-Point2.prototype.minThis = function (that) {
+Point3.prototype.minThis = function (that) {
     this.x = Math.min(this.x, that.x);
     this.y = Math.min(this.y, that.y);
     this.z = Math.min(this.z, that.z);
 };
 
-Point2.prototype.maxThis = function (that) {
+Point3.prototype.maxThis = function (that) {
     this.x = Math.max(this.x, that.x);
     this.y = Math.max(this.y, that.y);
     this.z = Math.max(this.z, that.z);
