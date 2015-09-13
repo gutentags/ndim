@@ -6,6 +6,13 @@ function Region(position, size) {
     this.size = size;
 }
 
+Region.prototype.copyFrom = function (that) {
+    this.position.copyFrom(that.position);
+    this.size.copyFrom(that.size);
+    return this;
+};
+
+// TODO deprecated for copyFrom
 Region.prototype.become = function (that) {
     this.position.become(that.position);
     this.size.become(that.size);

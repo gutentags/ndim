@@ -97,6 +97,14 @@ Point3.prototype.clone = function () {
     return new Point3(this.x, this.y, this.z);
 };
 
+Point3.prototype.copyFrom = function (that) {
+    this.x = that.x;
+    this.y = that.y;
+    this.z = that.z;
+    return this;
+};
+
+// TODO deprecated for copyFrom
 Point3.prototype.become = function (that) {
     this.x = that.x;
     this.y = that.y;
@@ -104,6 +112,13 @@ Point3.prototype.become = function (that) {
     return this;
 };
 
+Point3.prototype.copyFromXY = function (that) {
+    this.x = that.x;
+    this.y = that.y;
+    return this;
+};
+
+// TODO deprecated for copyFromXY
 Point3.prototype.becomeXY = function (that) {
     this.x = that.x;
     this.y = that.y;

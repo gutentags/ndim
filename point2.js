@@ -108,6 +108,13 @@ Point2.prototype.clone = function () {
     return new Point2(this.x, this.y);
 };
 
+Point2.prototype.copyFrom = function (that) {
+    this.x = that.x;
+    this.y = that.y;
+    return this;
+};
+
+// TODO deprecated for copyFrom
 Point2.prototype.become = function (that) {
     this.x = that.x;
     this.y = that.y;
