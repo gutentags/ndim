@@ -1,6 +1,6 @@
 {
   "name": "ndim",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "Points, regions, and other multi-dimensional geometry",
   "files": [
     "point.js",
