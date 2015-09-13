@@ -56,4 +56,3 @@ Point.prototype.min = function () {
 Point.prototype.max = function () {
     return this.clone().maxThis();
 };
-

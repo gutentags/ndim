@@ -125,6 +125,10 @@ Point3.prototype.becomeXY = function (that) {
     return this;
 };
 
+Point3.prototype.toString = function () {
+    return "[x=" + this.x + " y=" + this.y + " z=" + this.z + "]";
+};
+
 Point3.prototype.hash = function () {
     return this.x + "," + this.y + "," + this.z;
 };

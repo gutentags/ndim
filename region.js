@@ -78,3 +78,7 @@ Region.prototype.annexThis = function (that) {
 Region.prototype.equals = function (that) {
     return that && this.position.equals(that.position) && this.size.equals(that.size);
 };
+
+Region.prototype.toString = function () {
+    return "[position:" + this.position.toString() + " size:" + this.size.toString() + "]";
+};
