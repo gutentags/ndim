@@ -15,10 +15,10 @@ Region2.prototype.temp2 = new Point2();
 
 Region2.prototype.contains = function (that) {
     return (
-        this.position.x >= that.position.x &&
-        this.position.x + this.size.x <= that.position.x + that.size.x &&
-        this.position.y >= that.position.y &&
-        this.position.y + this.size.y <= that.position.y + that.size.y
+        this.position.x <= that.position.x &&
+        this.position.x + this.size.x >= that.position.x + that.size.x &&
+        this.position.y <= that.position.y &&
+        this.position.y + this.size.y >= that.position.y + that.size.y
     );
 };
 
