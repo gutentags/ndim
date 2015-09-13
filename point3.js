@@ -137,3 +137,6 @@ Point3.prototype.equals = function (that) {
     return this.x === that.x && this.y === that.y && this.z === that.z;
 };
 
+Point3.prototype.lessThan = function (that) {
+    return this.x < that.x && this.y < that.y && this.z < that.z;
+};
